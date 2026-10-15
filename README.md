@@ -49,3 +49,4 @@ References
 -W3schools. (2026). W3schools. Available at : https://www.w3schools.com/ (2026).
 -Flaticon. (2026). Flaticon. Available at:https://www.flaticon.com/icons.
 -Smith, J. (2024) Sunset over Cape Town. Unsplash. Available at: https://share.google/Fbpd0QHmxmxJSV0Xw.
+-Mapline (n/a). Mapline. Available at:https://mapline.com/create-a-custom-map-with-pins-no-coding-required/

@@ -1,0 +1,103 @@
+/* ===== IT SOP portal ===== */
+ 
+/* --- site header / footer: delete these two blocks if style.css already styles them --- */
+.site-header { background: #4f8228; display: flex; justify-content: space-between; align-items: center; padding: 0 40px; }
+.site-header img { height: 60px; display: block; }
+.site-header nav a { color: #fff; text-decoration: none; margin-left: 40px; font-size: 15px; }
+.site-header nav a.active { background: #fffa84; color: #111; padding: 8px 14px; border-radius: 20px; border-bottom: 2px solid #111; }
+.site-footer { background: #4f8228; color: #fff; width: 400px; margin-left: 300px; position: absolute; bottom: 100px; font-size: 14px; }
+.site-footer a { color: #fff; text-decoration: none; margin: 0 14px; font-weight: bold; }
+ 
+/* --- portal bar --- */
+.portal-bar { background: #4f8228; display: flex; align-items: center; gap: 22px; padding: 12px 40px; color: #fff; }
+.portal-bar .brand { display: flex; align-items: center; gap: 10px; font-weight: bold; font-size: 18px; margin-right: 10px; }
+.portal-bar .brand span { background: #0b4123; padding: 8px 10px; border-radius: 8px; }
+.portal-bar a { color: #fff; text-decoration: none; font-size: 15px; }
+.portal-bar a.current { border-bottom: 2px solid #fff; font-weight: bold; }
+ 
+/* --- layout: content on the left, navigation on the right --- */
+.portal { display: grid; grid-template-columns: 1fr 240px; background: #fdfdfd; }
+.portal-main { padding: 24px 32px; }
+.portal-nav { background: #f2f0ed; padding: 20px 12px; }
+.portal-nav h2 { font-size: 14px; font-weight: normal; color: #666; margin: 0 0 10px 10px; }
+.portal-nav a { display: block; padding: 10px 12px; margin-bottom: 4px; color: #333; text-decoration: none; border-radius: 8px; }
+.portal-nav a:hover { background: #e6e4e0; }
+.portal-nav a.current { background: #ddece2; font-weight: bold; }
+ 
+/* --- welcome box (home) --- */
+.welcome { background: #2a4614; color: #fff; border-radius: 16px; padding: 40px 24px; margin-bottom: 28px; }
+.welcome h1 { margin: 0 0 6px; font-size: 28px; text-transform: uppercase; }
+.welcome p { margin: 0 0 18px; color: #c9d6bd; }
+.search { display: flex; background: #8a8a8a; border-radius: 8px; padding: 6px; }
+.search input { flex: 1; background: transparent; border: 0; color: #000000; font-size: 15px; padding: 8px; }
+.search input::placeholder { color: #000000; }
+.search button { background: #2a4614; color: #fff; border: 0; border-radius: 6px; padding: 8px 18px; cursor: pointer; }
+ 
+/* --- category cards --- */
+.section-title { font-size: 16px; margin: 0 0 14px; }
+.cards { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
+.card { display: block; border: 1px solid #e3e1de; border-radius: 10px; padding: 18px; text-decoration: none; color: #222; background: #fff; }
+.card:hover { border-color: #4f8228; box-shadow: 0 2px 8px rgba(0,0,0,.08); }
+.tile { display: inline-block; width: 40px; height: 40px; line-height: 40px; text-align: right; border-radius: 8px; font-size: 20px; margin-bottom: 26px; }
+.card h3 { margin: 0 0 4px; font-size: 16px; }
+.card p { margin: 0; color: #666; }
+.blue { background: #dfebef; } .green { background: #ddf2e4; } .yellow { background: #f5ecd3; } .red { background: #f3e2de; }
+ 
+/* --- category page --- */
+.crumbs { font-size: 14px; color: #666; margin-bottom: 14px; }
+.crumbs a { color: #2a4614; }
+.page-head { background: #2a4614; color: #fff; border-radius: 16px; padding: 28px 24px; margin-bottom: 22px; }
+.page-head h1 { margin: 0 0 6px; font-size: 26px; }
+.page-head p { margin: 0; color: #c9d6bd; }
+.glance { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; margin-bottom: 22px; }
+.glance div { background: #f2f0ed; border-radius: 10px; padding: 12px 16px; }
+.glance strong { display: block; font-size: 13px; color: #666; font-weight: normal; }
+.sop-section { border: 1px solid #e8e7e5; border-radius: 10px; background: #fff; padding: 18px 22px; margin-bottom: 18px; color:#000000 }
+.sop-section h2 { margin: 0 0 10px; font-size: 18px; color: #0b0b0b; }
+.sop-section ul, .sop-section ol { margin: 0; padding-left: 22px; }
+.sop-section li { margin-bottom: 6px; }
+table { width: 100%; border-collapse: collapse; }
+th { background: #2a4614; color: #fff; text-align: left; padding: 10px; }
+td { padding: 10px; border-bottom: 1px solid #e3e1de; }
+tr:nth-child(even) td { background: #f8f7f5; }
+
+ 
+/* --- small screens: navigation drops below the content --- */
+@media (max-width: 800px) {
+  .portal { grid-template-columns: 1fr; }
+  .cards, .glance { grid-template-columns: 1fr; }
+  .site-header { flex-direction: column; padding: 10px; }
+  .site-header nav a { margin: 0 8px; }
+  .portal-bar { flex-wrap: wrap; padding: 12px 16px; }
+}
+
+/*-------desktop-------*/
+@media (max-width: 1100px) {
+  .portal { grid-template-columns: minmax(0, 1fr) 220px; }
+  .portal-main { padding: 24px 20px; }
+  .cards { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+
+
+/* undo clashes with style.css */
+footer.site-footer { position: static; width: auto; margin: 0; transform: none; clear: both; }
+.portal { width: 100%; max-width: none; margin: 0; }
+.portal-main { min-width: 0; }
+.portal-nav { display: block; position: static; width: auto; }
+.portal-bar { width: 100%; box-sizing: border-box; }
+.portal-bar .brand { white-space: nowrap; }
+
+/* ---------- Footer ---------- */
+footer {
+  margin-top: 2.5rem;
+  padding: 1.25rem 2rem;
+  background: var(--green);
+  color: var(--white);
+  text-align: center;
+}
+ 
+footer p { margin: 0.25rem 0; }
+footer a { color: inherit; text-decoration: none;}
+footer a:hover,
+footer a:focus-visible { text-decoration: underline; text-underline-offset: 4px; }
+footer .social { display: flex; justify-content: center; gap: 1.5rem; font-weight: 600; letter-spacing: 0.05em; }

@@ -47,3 +47,5 @@ Related Deliverables
 References
 -Visual Studio Code. (2026). Visual Studio Code. Available at: https://code.visualstudio.com/ GitHub. (2026). GitHub Documentation. Available at: https://docs.github.com/
 -W3schools. (2026). W3schools. Available at : https://www.w3schools.com/ (2026).
+-Flaticon. (2026). Flaticon. Available at:https://www.flaticon.com/icons.
+
